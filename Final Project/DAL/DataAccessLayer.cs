@@ -15,7 +15,7 @@ namespace DAL
         SqlCommand dbComm;
         SqlDataAdapter dbAdapter;
         DataTable dt;
-
+        
         public int InsertTopic(Topic topic)
         {
             try { dbConn.Open(); }
@@ -178,6 +178,114 @@ namespace DAL
 
             return dt;
         }
+         //methods for FrmError
+        public int AddError(error Error)
+        {
+            try
+            {
+                dbConn.Open();
 
+            }
+            catch
+            { 
+            }
+            dbCmd = new SqlCommand("sp_tblError_Add", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd.Parameters.AddWithValue("@ErrorID", Error.ErrorID);
+            dbCmd.Parameters.AddWithValue("@ErrorDesc",Error.ErrorDesc);
+            dbCmd.Parameters.AddWithValue("@StudentID", Error.StudentID);
+            dbCmd.Parameters.AddWithValue("@ProgLanguageID", Error.ProgLanguageID);
+            dbCmd.Parameters.AddWithValue("@ModuleTopicID", Error.ModuleTopicID);
+            dbCmd.Parameters.AddWithValue("@ErrorStatus", Error.ErrorStatus);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+
+        public DataTable GetError()
+        { 
+            try
+            {
+                dbConn.Open();
+
+            }
+            catch
+            {
+                
+            }
+            dbCmd = new SqlCommand("sp_tblError_SelectAll", dbConn);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+
+
+        }
+        // methods for FrmSolution
+        public int AddSolutions(solution Solution)
+        {
+            try
+            {
+                dbConn.Open();
+
+            }
+            catch
+            {
+            }
+            dbCmd = new SqlCommand("sp_tblSolution_Add", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd.Parameters.AddWithValue("@SolutionID", Solution.SolutionID);
+            dbCmd.Parameters.AddWithValue("@SolutionDescription", Solution.SolutionDescription);
+            dbCmd.Parameters.AddWithValue("@LectureID", Solution.LecturerID);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+
+        public DataTable GetSolution()
+        {
+            try
+            {
+                dbConn.Open();
+
+            }
+            catch
+            {
+
+            }
+            dbCmd = new SqlCommand("sp_tblSolution_SelectAll", dbConn);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+
+
+        }
+
+
+
+
+
+
+    }
+
+
+    public class solution
+    {
+        public int SolutionID { get; set; }
+        public string SolutionDescription { get; set; }
+        public int LecturerID { get; set; }
+    }
+    public class error
+    { 
+        public int ErrorID { get; set; }
+        public string ErrorDesc { get; set; }
+        public int StudentID { get; set ; }
+        public string ProgLanguageID { get; set; }
+        public string ModuleTopicID { get; set; }
+        public string ErrorStatus { get; set; }
+    }
     }
 }
