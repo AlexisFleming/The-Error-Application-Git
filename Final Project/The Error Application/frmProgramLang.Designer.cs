@@ -34,7 +34,7 @@ namespace The_Error_Application
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvProgram = new System.Windows.Forms.DataGridView();
-            this.txtProgram = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +53,7 @@ namespace The_Error_Application
             this.btnDisplay.TabIndex = 4;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // btnDelete
             // 
@@ -62,6 +63,7 @@ namespace The_Error_Application
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -71,6 +73,7 @@ namespace The_Error_Application
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -80,6 +83,7 @@ namespace The_Error_Application
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvProgram
             // 
@@ -90,13 +94,14 @@ namespace The_Error_Application
             this.dgvProgram.RowTemplate.Height = 24;
             this.dgvProgram.Size = new System.Drawing.Size(781, 176);
             this.dgvProgram.TabIndex = 5;
+            this.dgvProgram.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProgram_CellClick);
             // 
-            // txtProgram
+            // txtDescription
             // 
-            this.txtProgram.Location = new System.Drawing.Point(410, 67);
-            this.txtProgram.Name = "txtProgram";
-            this.txtProgram.Size = new System.Drawing.Size(213, 22);
-            this.txtProgram.TabIndex = 0;
+            this.txtDescription.Location = new System.Drawing.Point(410, 67);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(213, 22);
+            this.txtDescription.TabIndex = 0;
             // 
             // label1
             // 
@@ -125,25 +130,25 @@ namespace The_Error_Application
             this.rolesToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
             this.usersToolStripMenuItem.Text = "Users";
             // 
             // rolesToolStripMenuItem
             // 
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
             this.rolesToolStripMenuItem.Text = "Roles";
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
             this.logOutToolStripMenuItem.Text = "Log out";
             // 
             // frmProgramLang
@@ -156,7 +161,7 @@ namespace The_Error_Application
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvProgram);
-            this.Controls.Add(this.txtProgram);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -177,7 +182,7 @@ namespace The_Error_Application
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvProgram;
-        private System.Windows.Forms.TextBox txtProgram;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;

@@ -15,6 +15,8 @@ namespace The_Error_Application
 {
     public partial class frmTopics : Form
     {
+        
+
         public frmTopics()
         {
             InitializeComponent();
@@ -43,6 +45,7 @@ namespace The_Error_Application
            
         }
 
+        
         private void dgvTopic_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataTable dt = new DataTable();

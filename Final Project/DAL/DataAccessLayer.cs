@@ -178,6 +178,101 @@ namespace DAL
 
             return dt;
         }
+        public int InsertRole(Role role)
+        {
+            try { dbConn.Open(); }
+            catch { }
 
+            string sql = "sp_InsertRole";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@RoleDescription", role.RoleDescription);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public DataTable GetRole()
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_GetRole";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            return dt;
+        }
+        public int InsertProgLanguage(ProgLanguage prog)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_InsertProgLanguage";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ProgLanguageDesc", prog.ProgLanguageDesc);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public int UpdateProgLanguage(ProgLanguage prog)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_UpdateProgLanguage";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ProgLanguageDesc", prog.ProgLanguageDesc);
+            dbComm.Parameters.AddWithValue("@ProgLanguageID", prog.ProgLanguageID);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public int DeleteProgLanguage(ProgLanguage prog)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_DeleteProgLanguage";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("ProgLanguageID", prog.ProgLanguageID);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public DataTable GetProgLanguageByID(int progLanguageID)
+        {
+            try { dbConn.Open(); }
+            catch { }
+            string sql = "sp_GetProgLanguageByID";
+            dbComm = new SqlCommand(sql, dbConn);
+
+            dbComm.CommandType = CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@ProgLanguageID", progLanguageID);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+        }
+        public DataTable GetProgLanguage()
+        {
+            try { dbConn.Open(); }
+            catch { }
+            string sql = "sp_GetProgLanguage";
+            dbComm = new SqlCommand(sql, dbConn);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+        }
     }
 }
