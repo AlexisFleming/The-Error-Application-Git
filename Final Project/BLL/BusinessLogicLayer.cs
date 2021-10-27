@@ -57,6 +57,35 @@ namespace BLL
         {
             return dal.GetModule();
         }
+        public int InsertRole(Role role)
+        {
+            return dal.InsertRole(role);
+
+        }
+        public DataTable GetRole()
+        {
+            return dal.GetRole();
+        }
+        public int InsertProgLanguage(ProgLanguage prog)
+        {
+            return dal.InsertProgLanguage(prog);
+        }
+        public int UpdateProgLanguage(ProgLanguage prog)
+        {
+            return dal.UpdateProgLanguage(prog);
+        }
+        public int DeleteProgLanguage(ProgLanguage prog)
+        {
+            return dal.DeleteProgLanguage(prog);
+        }
+        public DataTable GetProgLanguageByID(int progLanguageID)
+        {
+            return dal.GetProgLanguageByID(progLanguageID);
+        }
+        public DataTable GetProgLanguage()
+        {
+            return dal.GetProgLanguage();
+        }
 
     }
 }
