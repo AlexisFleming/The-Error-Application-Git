@@ -48,6 +48,7 @@ namespace The_Error_Application
             this.dgvYear.RowTemplate.Height = 24;
             this.dgvYear.Size = new System.Drawing.Size(781, 171);
             this.dgvYear.TabIndex = 5;
+            this.dgvYear.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvYear_CellClick);
             // 
             // btnDisplay
             // 
@@ -57,6 +58,7 @@ namespace The_Error_Application
             this.btnDisplay.TabIndex = 4;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // btnDelete
             // 
@@ -66,6 +68,7 @@ namespace The_Error_Application
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -75,6 +78,7 @@ namespace The_Error_Application
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -84,6 +88,7 @@ namespace The_Error_Application
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtDescription
             // 

@@ -86,6 +86,46 @@ namespace BLL
         {
             return dal.GetProgLanguage();
         }
+        public DataTable ReportModule(int moduleID)
+        {
+            return dal.ReportModule(moduleID);
+        }
+        public int InsertYear(Year year)
+        {
+            return dal.InsertYear(year);
+        }
+        public int UpdateYear(Year year)
+        {
+            return dal.UpdateYear(year);
+        }
+        public int DeleteYear(Year year)
+        {
+            return dal.DeleteYear(year);
+        }
+        public DataTable GetYearByID(int yearID)
+        {
+            return dal.GetYearByID(yearID);
+        }
+        public DataTable GetYear()
+        {
+            return dal.GetYear();
+        }
+        public int InsertModule(Module mod)
+        {
+            return dal.InsertModule(mod);
+        }
+        public int UpdateModule(Module mod)
+        {
+            return dal.UpdateModule(mod);
+        }
+        public int DeleteModule(Module mod)
+        {
+            return dal.DeleteModule(mod);
+        }
+        public DataTable GetModuleByID(int moduleID)
+        {
+            return dal.GetModuleByID(moduleID);
+        }
 
     }
 }

@@ -90,6 +90,7 @@ namespace The_Error_Application
             this.btnDisplay.TabIndex = 5;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // btnDelete
             // 
@@ -99,6 +100,7 @@ namespace The_Error_Application
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -108,6 +110,7 @@ namespace The_Error_Application
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -117,6 +120,7 @@ namespace The_Error_Application
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvModule
             // 
@@ -127,6 +131,7 @@ namespace The_Error_Application
             this.dgvModule.RowTemplate.Height = 24;
             this.dgvModule.Size = new System.Drawing.Size(781, 171);
             this.dgvModule.TabIndex = 6;
+            this.dgvModule.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModule_CellClick);
             // 
             // menuStrip1
             // 
@@ -199,6 +204,7 @@ namespace The_Error_Application
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmModule";
             this.Text = "frmModule";
+            this.Load += new System.EventHandler(this.frmModule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvModule)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

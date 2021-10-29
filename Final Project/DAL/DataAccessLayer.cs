@@ -243,7 +243,7 @@ namespace DAL
             dbComm = new SqlCommand(sql, dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("ProgLanguageID", prog.ProgLanguageID);
+            dbComm.Parameters.AddWithValue("@ProgLanguageID", prog.ProgLanguageID);
 
             int x = dbComm.ExecuteNonQuery();
             return x;
@@ -273,6 +273,158 @@ namespace DAL
             dt = new DataTable();
             dbAdapter.Fill(dt);
             return dt;
+        }
+        public DataTable ReportModule(int moduleID)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_ReportModule";
+            dbComm = new SqlCommand(sql, dbConn);
+
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ModuleID", moduleID);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+        }
+        public int InsertYear(Year year)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_InsertYear";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@YearDescription", year.YearDescription);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public int UpdateYear(Year year)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_UpdateYear";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@YearDescription", year.YearDescription);
+            dbComm.Parameters.AddWithValue("@YearID", year.YearID);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+
+        }
+        public DataTable GetYearByID(int yearID)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_GetYearByID";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@YearID", yearID);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+        }
+        public DataTable GetYear()
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_GetYear";
+            dbComm = new SqlCommand(sql, dbConn);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+        }
+        public int DeleteYear(Year year)
+        {
+
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_DeleteYear";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@YearID", year.YearID);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public int InsertModule(Module mod)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_InsertModule";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ModuleDescription", mod.ModuleDescription);
+            dbComm.Parameters.AddWithValue("@YearID", mod.YearID);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public int UpdateModule(Module mod)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_UpdateModule";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ModuleID", mod.ModuleID);
+            dbComm.Parameters.AddWithValue("@ModuleDescription", mod.ModuleDescription);
+            dbComm.Parameters.AddWithValue("@YearID", mod.YearID);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public int DeleteModule(Module mod)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_DeleteModule";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ModuleID", mod.ModuleID);
+
+            int x = dbComm.ExecuteNonQuery();
+            return x;
+        }
+        public DataTable GetModuleByID(int moduleID)
+        {
+            try { dbConn.Open(); }
+            catch { }
+
+            string sql = "sp_GetModuleByID";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ModuleID", moduleID);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            return dt;
+
         }
     }
 }
