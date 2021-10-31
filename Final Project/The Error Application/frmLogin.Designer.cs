@@ -65,6 +65,7 @@ namespace The_Error_Application
             // 
             this.txtPassword.Location = new System.Drawing.Point(288, 109);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(193, 22);
             this.txtPassword.TabIndex = 1;
             // 
@@ -76,6 +77,7 @@ namespace The_Error_Application
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // frmLogin
             // 
