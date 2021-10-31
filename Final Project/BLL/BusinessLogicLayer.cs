@@ -127,5 +127,40 @@ namespace BLL
             return dal.GetModuleByID(moduleID);
         }
 
+        public DataTable GetLogin(string UserName, string Password)
+        { return dal.GetLogin(UserName, Password); }
+
+        public DataTable GetUserInfo()
+        { return dal.GetUserInfo(); }
+
+        public int InsertUser(UserData userData)
+        { return dal.InsertUser(userData); }
+
+        public int GetRoleByID(string RoleDescription)
+        { return dal.GetRoleByID(RoleDescription); }
+
+        public DataTable GetUserByID(int userID)
+        { return dal.GetUserByID(userID); }
+
+        public int UpdateUser(UserData userdata)
+        { return dal.UpdateUser(userdata); }
+
+        public int DeleteUser(UserData userData)
+        { return dal.DeleteUser(userData); }
+
+        public DataTable AdminFilterReport()
+        { return dal.AdminFilterReport(); }
+
+        public DataTable LecturerFilterReport()
+        { return dal.LecturerFilterReport(); }
+
+        public DataTable StudentFilterReport()
+        { return dal.StudentFilterReport(); }
+
+        public DataTable LecturerInformationReport(UserData userData)
+        { return dal.LecturerInformationReport(userData); }
+
+        public DataTable StudentInformationReport(UserData userData)
+        { return dal.StudentInformationReport(userData); }
     }
 }
