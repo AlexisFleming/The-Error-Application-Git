@@ -61,6 +61,132 @@ namespace The_Error_Application
             this.gpbAdminReport.SuspendLayout();
             this.SuspendLayout();
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 28);
+            this.menuStrip1.TabIndex = 40;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.progammingModulesToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.logOutToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // progammingModulesToolStripMenuItem
+            // 
+            this.progammingModulesToolStripMenuItem.Name = "progammingModulesToolStripMenuItem";
+            this.progammingModulesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.progammingModulesToolStripMenuItem.Text = "Progamming Modules";
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.logOutToolStripMenuItem.Text = "Exit";
+            // 
+            // btnDiplay
+            // 
+            this.btnDiplay.Location = new System.Drawing.Point(430, 220);
+            this.btnDiplay.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDiplay.Name = "btnDiplay";
+            this.btnDiplay.Size = new System.Drawing.Size(100, 28);
+            this.btnDiplay.TabIndex = 8;
+            this.btnDiplay.Text = "Refresh";
+            this.btnDiplay.UseVisualStyleBackColor = true;
+            // 
+            // gpbAdminReport
+            // 
+            this.gpbAdminReport.Controls.Add(this.btnReportHelp);
+            this.gpbAdminReport.Controls.Add(this.btnStudReport);
+            this.gpbAdminReport.Controls.Add(this.btnLectReport);
+            this.gpbAdminReport.Controls.Add(this.btnStudentSort);
+            this.gpbAdminReport.Controls.Add(this.btnLectureSort);
+            this.gpbAdminReport.Controls.Add(this.btnAdminSort);
+            this.gpbAdminReport.Location = new System.Drawing.Point(596, 43);
+            this.gpbAdminReport.Margin = new System.Windows.Forms.Padding(4);
+            this.gpbAdminReport.Name = "gpbAdminReport";
+            this.gpbAdminReport.Padding = new System.Windows.Forms.Padding(4);
+            this.gpbAdminReport.Size = new System.Drawing.Size(395, 160);
+            this.gpbAdminReport.TabIndex = 57;
+            this.gpbAdminReport.TabStop = false;
+            this.gpbAdminReport.Text = "Reports";
+            // 
+            // btnReportHelp
+            // 
+            this.btnReportHelp.Location = new System.Drawing.Point(185, 28);
+            this.btnReportHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReportHelp.Name = "btnReportHelp";
+            this.btnReportHelp.Size = new System.Drawing.Size(148, 28);
+            this.btnReportHelp.TabIndex = 13;
+            this.btnReportHelp.Text = "Report Help";
+            this.btnReportHelp.UseVisualStyleBackColor = true;
+            // 
+            // btnStudReport
+            // 
+            this.btnStudReport.Location = new System.Drawing.Point(185, 100);
+            this.btnStudReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStudReport.Name = "btnStudReport";
+            this.btnStudReport.Size = new System.Drawing.Size(148, 28);
+            this.btnStudReport.TabIndex = 15;
+            this.btnStudReport.Text = "Get Student Report";
+            this.btnStudReport.UseVisualStyleBackColor = true;
+            // 
+            // btnLectReport
+            // 
+            this.btnLectReport.Location = new System.Drawing.Point(185, 64);
+            this.btnLectReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLectReport.Name = "btnLectReport";
+            this.btnLectReport.Size = new System.Drawing.Size(148, 28);
+            this.btnLectReport.TabIndex = 14;
+            this.btnLectReport.Text = "Get Lecturer Report";
+            this.btnLectReport.UseVisualStyleBackColor = true;
+            // 
+            // btnStudentSort
+            // 
+            this.btnStudentSort.Location = new System.Drawing.Point(40, 100);
+            this.btnStudentSort.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStudentSort.Name = "btnStudentSort";
+            this.btnStudentSort.Size = new System.Drawing.Size(100, 28);
+            this.btnStudentSort.TabIndex = 12;
+            this.btnStudentSort.Text = "Students";
+            this.btnStudentSort.UseVisualStyleBackColor = true;
+            // 
+            // btnLectureSort
+            // 
+            this.btnLectureSort.Location = new System.Drawing.Point(40, 64);
+            this.btnLectureSort.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLectureSort.Name = "btnLectureSort";
+            this.btnLectureSort.Size = new System.Drawing.Size(100, 28);
+            this.btnLectureSort.TabIndex = 11;
+            this.btnLectureSort.Text = "Lecturers";
+            this.btnLectureSort.UseVisualStyleBackColor = true;
+            // 
+            // btnAdminSort
+            // 
+            this.btnAdminSort.Location = new System.Drawing.Point(40, 28);
+            this.btnAdminSort.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdminSort.Name = "btnAdminSort";
+            this.btnAdminSort.Size = new System.Drawing.Size(100, 28);
+            this.btnAdminSort.TabIndex = 10;
+            this.btnAdminSort.Text = "Admins";
+            this.btnAdminSort.UseVisualStyleBackColor = true;
+            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(304, 162);
