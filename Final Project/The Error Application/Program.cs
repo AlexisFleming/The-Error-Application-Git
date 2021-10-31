@@ -16,7 +16,7 @@ namespace The_Error_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmYear());
+            Application.Run(new frmUser());
         }
     }
 }
