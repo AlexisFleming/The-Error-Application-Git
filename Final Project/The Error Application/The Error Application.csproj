@@ -52,11 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdminHub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminHub.Designer.cs">
+      <DependentUpon>frmAdminHub.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmErrorSolution.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmErrorSolution.Designer.cs">
       <DependentUpon>frmErrorSolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLecturerHub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLecturerHub.Designer.cs">
+      <DependentUpon>frmLecturerHub.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTopics.cs">
       <SubType>Form</SubType>
@@ -120,8 +132,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdminHub.resx">
+      <DependentUpon>frmAdminHub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmErrorSolution.resx">
       <DependentUpon>frmErrorSolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLecturerHub.resx">
+      <DependentUpon>frmLecturerHub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTopics.resx">
       <DependentUpon>frmTopics.cs</DependentUpon>

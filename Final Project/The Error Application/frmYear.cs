@@ -62,24 +62,38 @@ namespace The_Error_Application
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Year year = new Year();
-
-            year.YearID = int.Parse(dgvYear.SelectedRows[0].Cells["YearID"].Value.ToString());
-
-            int x = bll.DeleteYear(year);
-            if (x > 0)
+            //Setting up a Yes No message box for user confirmation
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure you wish to delete?", "Confirmation", buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show(x + " Deleted!!");
-            }
-            else
-            {
-                MessageBox.Show(x + " Deleted!!");
+
+                Year year = new Year();
+
+                year.YearID = int.Parse(dgvYear.SelectedRows[0].Cells["YearID"].Value.ToString());
+
+                int x = bll.DeleteYear(year);
+                if (x > 0)
+                {
+                    MessageBox.Show(x + " Deleted!!");
+                }
+                else
+                {
+                    MessageBox.Show(x + " Deleted!!");
+                }
             }
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
             dgvYear.DataSource = bll.GetYear();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdminHub frmAdminHub = new frmAdminHub();
+            frmAdminHub.Show();
+            this.Hide();
         }
     }
 }

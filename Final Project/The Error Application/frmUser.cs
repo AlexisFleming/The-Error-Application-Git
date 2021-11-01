@@ -31,9 +31,11 @@ namespace The_Error_Application
 
             cmbRole.DataSource = bll.GetRole();
 
-            cmbRole.ValueMember = "RoleDescription";
-
             cmbRole.DisplayMember = "RoleDescription";
+
+            cmbRole.ValueMember = "RoleID";
+
+            
 
             btnLectReport.Enabled = false;
             btnAdd.Enabled = true;
@@ -312,8 +314,8 @@ namespace The_Error_Application
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Returns user to login form
-            frmLogin loginForm = new frmLogin();
+            //Returns user to Admin Hub
+            frmAdminHub loginForm = new frmAdminHub();
             loginForm.Show();
             this.Hide();
         }
@@ -330,6 +332,11 @@ namespace The_Error_Application
             frmModule frmModule = new frmModule();
             frmModule.Show();
             this.Hide();
+        }
+
+        private void dgvAdmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

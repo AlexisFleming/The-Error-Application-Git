@@ -162,5 +162,8 @@ namespace BLL
 
         public DataTable StudentInformationReport(UserData userData)
         { return dal.StudentInformationReport(userData); }
+
+        public DataTable GetRoleID()
+        { return dal.GetRoleID(); }
     }
 }

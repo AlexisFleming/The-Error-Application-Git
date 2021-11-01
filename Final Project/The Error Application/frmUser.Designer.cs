@@ -45,152 +45,24 @@ namespace The_Error_Application
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.progammingModulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gpbAdminReport = new System.Windows.Forms.GroupBox();
-            this.btnAdminSort = new System.Windows.Forms.Button();
-            this.btnLectureSort = new System.Windows.Forms.Button();
-            this.btnStudentSort = new System.Windows.Forms.Button();
-            this.btnDiplay = new System.Windows.Forms.Button();
-            this.btnLectReport = new System.Windows.Forms.Button();
-            this.btnStudReport = new System.Windows.Forms.Button();
             this.btnReportHelp = new System.Windows.Forms.Button();
+            this.btnStudReport = new System.Windows.Forms.Button();
+            this.btnLectReport = new System.Windows.Forms.Button();
+            this.btnStudentSort = new System.Windows.Forms.Button();
+            this.btnLectureSort = new System.Windows.Forms.Button();
+            this.btnAdminSort = new System.Windows.Forms.Button();
+            this.btnDiplay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.gpbAdminReport.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1004, 28);
-            this.menuStrip1.TabIndex = 40;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.progammingModulesToolStripMenuItem,
-            this.rolesToolStripMenuItem,
-            this.logOutToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
-            this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // progammingModulesToolStripMenuItem
-            // 
-            this.progammingModulesToolStripMenuItem.Name = "progammingModulesToolStripMenuItem";
-            this.progammingModulesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.progammingModulesToolStripMenuItem.Text = "Progamming Modules";
-            // 
-            // rolesToolStripMenuItem
-            // 
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.rolesToolStripMenuItem.Text = "Roles";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.logOutToolStripMenuItem.Text = "Exit";
-            // 
-            // btnDiplay
-            // 
-            this.btnDiplay.Location = new System.Drawing.Point(430, 220);
-            this.btnDiplay.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDiplay.Name = "btnDiplay";
-            this.btnDiplay.Size = new System.Drawing.Size(100, 28);
-            this.btnDiplay.TabIndex = 8;
-            this.btnDiplay.Text = "Refresh";
-            this.btnDiplay.UseVisualStyleBackColor = true;
-            // 
-            // gpbAdminReport
-            // 
-            this.gpbAdminReport.Controls.Add(this.btnReportHelp);
-            this.gpbAdminReport.Controls.Add(this.btnStudReport);
-            this.gpbAdminReport.Controls.Add(this.btnLectReport);
-            this.gpbAdminReport.Controls.Add(this.btnStudentSort);
-            this.gpbAdminReport.Controls.Add(this.btnLectureSort);
-            this.gpbAdminReport.Controls.Add(this.btnAdminSort);
-            this.gpbAdminReport.Location = new System.Drawing.Point(596, 43);
-            this.gpbAdminReport.Margin = new System.Windows.Forms.Padding(4);
-            this.gpbAdminReport.Name = "gpbAdminReport";
-            this.gpbAdminReport.Padding = new System.Windows.Forms.Padding(4);
-            this.gpbAdminReport.Size = new System.Drawing.Size(395, 160);
-            this.gpbAdminReport.TabIndex = 57;
-            this.gpbAdminReport.TabStop = false;
-            this.gpbAdminReport.Text = "Reports";
-            // 
-            // btnReportHelp
-            // 
-            this.btnReportHelp.Location = new System.Drawing.Point(185, 28);
-            this.btnReportHelp.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReportHelp.Name = "btnReportHelp";
-            this.btnReportHelp.Size = new System.Drawing.Size(148, 28);
-            this.btnReportHelp.TabIndex = 13;
-            this.btnReportHelp.Text = "Report Help";
-            this.btnReportHelp.UseVisualStyleBackColor = true;
-            // 
-            // btnStudReport
-            // 
-            this.btnStudReport.Location = new System.Drawing.Point(185, 100);
-            this.btnStudReport.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStudReport.Name = "btnStudReport";
-            this.btnStudReport.Size = new System.Drawing.Size(148, 28);
-            this.btnStudReport.TabIndex = 15;
-            this.btnStudReport.Text = "Get Student Report";
-            this.btnStudReport.UseVisualStyleBackColor = true;
-            // 
-            // btnLectReport
-            // 
-            this.btnLectReport.Location = new System.Drawing.Point(185, 64);
-            this.btnLectReport.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLectReport.Name = "btnLectReport";
-            this.btnLectReport.Size = new System.Drawing.Size(148, 28);
-            this.btnLectReport.TabIndex = 14;
-            this.btnLectReport.Text = "Get Lecturer Report";
-            this.btnLectReport.UseVisualStyleBackColor = true;
-            // 
-            // btnStudentSort
-            // 
-            this.btnStudentSort.Location = new System.Drawing.Point(40, 100);
-            this.btnStudentSort.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStudentSort.Name = "btnStudentSort";
-            this.btnStudentSort.Size = new System.Drawing.Size(100, 28);
-            this.btnStudentSort.TabIndex = 12;
-            this.btnStudentSort.Text = "Students";
-            this.btnStudentSort.UseVisualStyleBackColor = true;
-            // 
-            // btnLectureSort
-            // 
-            this.btnLectureSort.Location = new System.Drawing.Point(40, 64);
-            this.btnLectureSort.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLectureSort.Name = "btnLectureSort";
-            this.btnLectureSort.Size = new System.Drawing.Size(100, 28);
-            this.btnLectureSort.TabIndex = 11;
-            this.btnLectureSort.Text = "Lecturers";
-            this.btnLectureSort.UseVisualStyleBackColor = true;
-            // 
-            // btnAdminSort
-            // 
-            this.btnAdminSort.Location = new System.Drawing.Point(40, 28);
-            this.btnAdminSort.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdminSort.Name = "btnAdminSort";
-            this.btnAdminSort.Size = new System.Drawing.Size(100, 28);
-            this.btnAdminSort.TabIndex = 10;
-            this.btnAdminSort.Text = "Admins";
-            this.btnAdminSort.UseVisualStyleBackColor = true;
-            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(304, 162);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 23);
             this.btnDelete.TabIndex = 7;
@@ -201,7 +73,7 @@ namespace The_Error_Application
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(220, 162);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(80, 23);
             this.btnUpdate.TabIndex = 6;
@@ -212,7 +84,7 @@ namespace The_Error_Application
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(138, 162);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(80, 23);
             this.btnAdd.TabIndex = 5;
@@ -224,19 +96,20 @@ namespace The_Error_Application
             // 
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Location = new System.Drawing.Point(8, 214);
-            this.dgvAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAdmin.Name = "dgvAdmin";
             this.dgvAdmin.RowHeadersWidth = 51;
             this.dgvAdmin.RowTemplate.Height = 24;
             this.dgvAdmin.Size = new System.Drawing.Size(802, 139);
             this.dgvAdmin.TabIndex = 9;
             this.dgvAdmin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmin_CellClick);
+            this.dgvAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmin_CellContentClick);
             // 
             // cmbRole
             // 
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Location = new System.Drawing.Point(264, 109);
-            this.cmbRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRole.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(161, 21);
             this.cmbRole.TabIndex = 4;
@@ -245,7 +118,7 @@ namespace The_Error_Application
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(264, 82);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(161, 23);
@@ -255,7 +128,7 @@ namespace The_Error_Application
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(264, 59);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(161, 23);
             this.txtEmail.TabIndex = 2;
@@ -286,7 +159,7 @@ namespace The_Error_Application
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(264, 37);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(161, 23);
             this.txtLastName.TabIndex = 1;
@@ -306,7 +179,7 @@ namespace The_Error_Application
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(264, 14);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(161, 23);
             this.txtFirstName.TabIndex = 0;
@@ -348,26 +221,10 @@ namespace The_Error_Application
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.progammingModulesToolStripMenuItem,
-            this.rolesToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // progammingModulesToolStripMenuItem
-            // 
-            this.progammingModulesToolStripMenuItem.Name = "progammingModulesToolStripMenuItem";
-            this.progammingModulesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.progammingModulesToolStripMenuItem.Text = "Progamming Modules";
-            this.progammingModulesToolStripMenuItem.Click += new System.EventHandler(this.progammingModulesToolStripMenuItem_Click);
-            // 
-            // rolesToolStripMenuItem
-            // 
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.rolesToolStripMenuItem.Text = "Roles";
-            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -385,65 +242,29 @@ namespace The_Error_Application
             this.gpbAdminReport.Controls.Add(this.btnLectureSort);
             this.gpbAdminReport.Controls.Add(this.btnAdminSort);
             this.gpbAdminReport.Location = new System.Drawing.Point(514, 18);
+            this.gpbAdminReport.Margin = new System.Windows.Forms.Padding(4);
             this.gpbAdminReport.Name = "gpbAdminReport";
+            this.gpbAdminReport.Padding = new System.Windows.Forms.Padding(4);
             this.gpbAdminReport.Size = new System.Drawing.Size(296, 130);
             this.gpbAdminReport.TabIndex = 41;
             this.gpbAdminReport.TabStop = false;
             this.gpbAdminReport.Text = "Reports";
             // 
-            // btnAdminSort
+            // btnReportHelp
             // 
-            this.btnAdminSort.Location = new System.Drawing.Point(30, 23);
-            this.btnAdminSort.Name = "btnAdminSort";
-            this.btnAdminSort.Size = new System.Drawing.Size(75, 23);
-            this.btnAdminSort.TabIndex = 0;
-            this.btnAdminSort.Text = "Admins";
-            this.btnAdminSort.UseVisualStyleBackColor = true;
-            this.btnAdminSort.Click += new System.EventHandler(this.btnAdminSort_Click);
-            // 
-            // btnLectureSort
-            // 
-            this.btnLectureSort.Location = new System.Drawing.Point(30, 52);
-            this.btnLectureSort.Name = "btnLectureSort";
-            this.btnLectureSort.Size = new System.Drawing.Size(75, 23);
-            this.btnLectureSort.TabIndex = 1;
-            this.btnLectureSort.Text = "Lecturers";
-            this.btnLectureSort.UseVisualStyleBackColor = true;
-            this.btnLectureSort.Click += new System.EventHandler(this.btnLectureSort_Click);
-            // 
-            // btnStudentSort
-            // 
-            this.btnStudentSort.Location = new System.Drawing.Point(30, 81);
-            this.btnStudentSort.Name = "btnStudentSort";
-            this.btnStudentSort.Size = new System.Drawing.Size(75, 23);
-            this.btnStudentSort.TabIndex = 2;
-            this.btnStudentSort.Text = "Students";
-            this.btnStudentSort.UseVisualStyleBackColor = true;
-            this.btnStudentSort.Click += new System.EventHandler(this.btnStudentSort_Click);
-            // 
-            // btnDiplay
-            // 
-            this.btnDiplay.Location = new System.Drawing.Point(389, 162);
-            this.btnDiplay.Name = "btnDiplay";
-            this.btnDiplay.Size = new System.Drawing.Size(75, 23);
-            this.btnDiplay.TabIndex = 3;
-            this.btnDiplay.Text = "Refresh";
-            this.btnDiplay.UseVisualStyleBackColor = true;
-            this.btnDiplay.Click += new System.EventHandler(this.btnDiplay_Click);
-            // 
-            // btnLectReport
-            // 
-            this.btnLectReport.Location = new System.Drawing.Point(139, 52);
-            this.btnLectReport.Name = "btnLectReport";
-            this.btnLectReport.Size = new System.Drawing.Size(111, 23);
-            this.btnLectReport.TabIndex = 42;
-            this.btnLectReport.Text = "Get Lecturer Report";
-            this.btnLectReport.UseVisualStyleBackColor = true;
-            this.btnLectReport.Click += new System.EventHandler(this.btnLectReport_Click);
+            this.btnReportHelp.Location = new System.Drawing.Point(139, 23);
+            this.btnReportHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReportHelp.Name = "btnReportHelp";
+            this.btnReportHelp.Size = new System.Drawing.Size(111, 23);
+            this.btnReportHelp.TabIndex = 42;
+            this.btnReportHelp.Text = "Report Help";
+            this.btnReportHelp.UseVisualStyleBackColor = true;
+            this.btnReportHelp.Click += new System.EventHandler(this.btnReportHelp_Click);
             // 
             // btnStudReport
             // 
             this.btnStudReport.Location = new System.Drawing.Point(139, 81);
+            this.btnStudReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudReport.Name = "btnStudReport";
             this.btnStudReport.Size = new System.Drawing.Size(111, 23);
             this.btnStudReport.TabIndex = 43;
@@ -451,15 +272,60 @@ namespace The_Error_Application
             this.btnStudReport.UseVisualStyleBackColor = true;
             this.btnStudReport.Click += new System.EventHandler(this.btnStudReport_Click);
             // 
-            // btnReportHelp
+            // btnLectReport
             // 
-            this.btnReportHelp.Location = new System.Drawing.Point(139, 23);
-            this.btnReportHelp.Name = "btnReportHelp";
-            this.btnReportHelp.Size = new System.Drawing.Size(111, 23);
-            this.btnReportHelp.TabIndex = 42;
-            this.btnReportHelp.Text = "Report Help";
-            this.btnReportHelp.UseVisualStyleBackColor = true;
-            this.btnReportHelp.Click += new System.EventHandler(this.btnReportHelp_Click);
+            this.btnLectReport.Location = new System.Drawing.Point(139, 52);
+            this.btnLectReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLectReport.Name = "btnLectReport";
+            this.btnLectReport.Size = new System.Drawing.Size(111, 23);
+            this.btnLectReport.TabIndex = 42;
+            this.btnLectReport.Text = "Get Lecturer Report";
+            this.btnLectReport.UseVisualStyleBackColor = true;
+            this.btnLectReport.Click += new System.EventHandler(this.btnLectReport_Click);
+            // 
+            // btnStudentSort
+            // 
+            this.btnStudentSort.Location = new System.Drawing.Point(30, 81);
+            this.btnStudentSort.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStudentSort.Name = "btnStudentSort";
+            this.btnStudentSort.Size = new System.Drawing.Size(75, 23);
+            this.btnStudentSort.TabIndex = 2;
+            this.btnStudentSort.Text = "Students";
+            this.btnStudentSort.UseVisualStyleBackColor = true;
+            this.btnStudentSort.Click += new System.EventHandler(this.btnStudentSort_Click);
+            // 
+            // btnLectureSort
+            // 
+            this.btnLectureSort.Location = new System.Drawing.Point(30, 52);
+            this.btnLectureSort.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLectureSort.Name = "btnLectureSort";
+            this.btnLectureSort.Size = new System.Drawing.Size(75, 23);
+            this.btnLectureSort.TabIndex = 1;
+            this.btnLectureSort.Text = "Lecturers";
+            this.btnLectureSort.UseVisualStyleBackColor = true;
+            this.btnLectureSort.Click += new System.EventHandler(this.btnLectureSort_Click);
+            // 
+            // btnAdminSort
+            // 
+            this.btnAdminSort.Location = new System.Drawing.Point(30, 23);
+            this.btnAdminSort.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdminSort.Name = "btnAdminSort";
+            this.btnAdminSort.Size = new System.Drawing.Size(75, 23);
+            this.btnAdminSort.TabIndex = 0;
+            this.btnAdminSort.Text = "Admins";
+            this.btnAdminSort.UseVisualStyleBackColor = true;
+            this.btnAdminSort.Click += new System.EventHandler(this.btnAdminSort_Click);
+            // 
+            // btnDiplay
+            // 
+            this.btnDiplay.Location = new System.Drawing.Point(389, 162);
+            this.btnDiplay.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDiplay.Name = "btnDiplay";
+            this.btnDiplay.Size = new System.Drawing.Size(75, 23);
+            this.btnDiplay.TabIndex = 3;
+            this.btnDiplay.Text = "Refresh";
+            this.btnDiplay.UseVisualStyleBackColor = true;
+            this.btnDiplay.Click += new System.EventHandler(this.btnDiplay_Click);
             // 
             // frmUser
             // 
@@ -484,7 +350,7 @@ namespace The_Error_Application
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUser";
             this.Text = "frmUser";
             this.Load += new System.EventHandler(this.frmUser_Load);
@@ -514,8 +380,6 @@ namespace The_Error_Application
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem progammingModulesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.GroupBox gpbAdminReport;
         private System.Windows.Forms.Button btnReportHelp;

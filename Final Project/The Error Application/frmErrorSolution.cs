@@ -16,5 +16,12 @@ namespace The_Error_Application
         {
             InitializeComponent();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLecturerHub frmLecturerHub = new frmLecturerHub();
+            frmLecturerHub.Show();
+            this.Show();
+        }
     }
 }

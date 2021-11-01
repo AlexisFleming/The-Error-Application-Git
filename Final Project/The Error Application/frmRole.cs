@@ -41,5 +41,12 @@ namespace The_Error_Application
         {
             dgvRole.DataSource = bll.GetRole();
         }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLecturerHub frmAdminHub = new frmLecturerHub();
+            frmAdminHub.Show();
+            this.Hide();
+        }
     }
 }

@@ -433,9 +433,9 @@ namespace DAL
         public DataTable GetLogin(string UserName, string Password)
         {
         /*
-        Runs the CheckLogin Procedure which compares the given username and password
-        to the respective fields in the database and if both values match it fills
-        a datatable with the information on the logged in user.
+            Runs the CheckLogin Procedure which compares the given username and password
+            to the respective fields in the database and if both values match it fills
+            a datatable with the information on the logged in user.
 
             NOTE: Case sensitivity is already handled within the procedure.
             */
@@ -463,7 +463,7 @@ namespace DAL
             /*
              Runs the GetUserInfo Procedure which fills a data table with all data
              from tblUsers
-             */
+              */
             try
             {
                 dbConn.Open();
@@ -494,7 +494,7 @@ namespace DAL
         public int InsertUser(UserData userData)
         {/*
           Runs InsertUser Procedure which Inserts a record into tblUser
-          */
+           */
 
             try
             {
@@ -530,7 +530,7 @@ namespace DAL
         {/*
           Runs the GetRoleByID Procedure which returns the RoleID for the
           RoleDescription given and returns the RoleID in a string.
-          */
+            */
 
             try
             {
@@ -567,7 +567,7 @@ namespace DAL
         {/*
           Runs GetUserByID procedure which fills a datatable with the information
           from a specific record based on what user ID was given.
-          */
+            */
 
             try
             {
@@ -599,7 +599,7 @@ namespace DAL
         public int UpdateUser(UserData userdata)
         {/*
           Runs the UpdateUser Procedure which updates a chosen record in tblUser
-          */
+            */
 
             try
             {
@@ -635,7 +635,7 @@ namespace DAL
          public int DeleteUser(UserData userData)
         {/*
           Runs the DeleteUser Procedure which deletes a record from tblUser.
-          */
+            */
             try
             {
                 dbConn.Open();
@@ -665,7 +665,7 @@ namespace DAL
         public DataTable AdminFilterReport()
         {
             //This procedure fills a data table with information from tblUser but
-            //only for users with the admin role
+            //Only for users with the admin role
             try
             {
                 dbConn.Open();
@@ -691,7 +691,7 @@ namespace DAL
         public DataTable LecturerFilterReport()
         {
             //This procedure fills a data table with information from tblUser but
-            //only for users with the Lecturer role
+            //Only for users with the Lecturer role
             try
             {
                 dbConn.Open();
@@ -717,7 +717,7 @@ namespace DAL
         public DataTable StudentFilterReport()
         {
             //This procedure fills a data table with information from tblUser but
-            //only for users with the Student role
+            //Only for users with the Student role
             try
             {
                 dbConn.Open();
@@ -745,7 +745,7 @@ namespace DAL
         public DataTable LecturerInformationReport(UserData userData)
         {
             //This procedure returns information of a Lecturer when given a userID that
-            //is linked to the Lecturer role the information is UserID, Username,
+            //-is linked to the Lecturer role the information is UserID, Username,
             //Surname and number of Solutions submitted
             try
             {
@@ -777,7 +777,7 @@ namespace DAL
         public DataTable StudentInformationReport(UserData userData)
         {
             //This procedure returns information of a student when given a userID that
-            //is linked to the student role the information is UserID, Username,
+            //-is linked to the student role the information is UserID, Username,
             //Surname, ProgLanguageDesc, TopicDescription, ModuleDescription and
             //YearDescription
             try
@@ -805,6 +805,35 @@ namespace DAL
 ///                               EMD OF StudentInformationReport                  ///
 //////////////////////////////////////////////////////////////////////////////////////
 
+
+//////////////////////////////////////////////////////////////////////////////////////
+///                               START OF GetRoleID                               ///
+//////////////////////////////////////////////////////////////////////////////////////
+
+        public DataTable GetRoleID()
+        {
+            //Gets a roleID based on what Role Description is given
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_GetRoleID", dbConn);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+
+        }
+
+//////////////////////////////////////////////////////////////////////////////////////
+///                               END OF GetRoleID                                 ///
+//////////////////////////////////////////////////////////////////////////////////////
 
     }
 }
