@@ -581,7 +581,7 @@ namespace DAL
             dbComm = new SqlCommand("sp_GetUserByID", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
             dbComm.Parameters.AddWithValue("@UserID", UserID);
-
+            //Yes EXample
             dbAdapter = new SqlDataAdapter(dbComm);
             dt = new DataTable();
             dbAdapter.Fill(dt);
