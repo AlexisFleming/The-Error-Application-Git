@@ -33,10 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BLL">
+    <Reference Include="BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BLL\bin\Debug\BLL.dll</HintPath>
     </Reference>
-    <Reference Include="DAL">
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BLL\bin\Debug\DAL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -52,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmErrorReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmErrorReport.Designer.cs">
+      <DependentUpon>FrmErrorReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmErrorSolution.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +128,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmErrorReport.resx">
+      <DependentUpon>FrmErrorReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmErrorSolution.resx">
       <DependentUpon>frmErrorSolution.cs</DependentUpon>
     </EmbeddedResource>

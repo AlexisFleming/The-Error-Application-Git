@@ -130,5 +130,10 @@ namespace The_Error_Application
             this.Hide();
             login.Show();
         }
+
+        private void cmbModule_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

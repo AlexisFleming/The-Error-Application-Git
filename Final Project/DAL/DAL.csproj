@@ -42,12 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="error.cs" />
+    <Compile Include="ErrorSolution.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="ModuleTopic.cs" />
     <Compile Include="ProgLanguage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
+    <Compile Include="solution.cs" />
+    <Compile Include="student.cs" />
     <Compile Include="Topic.cs" />
+    <Compile Include="UserData.cs" />
     <Compile Include="Year.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

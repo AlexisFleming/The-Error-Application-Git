@@ -127,5 +127,108 @@ namespace BLL
             return dal.GetModuleByID(moduleID);
         }
 
+        public DataTable GetLogin(string UserName, string Password)
+        { return dal.GetLogin(UserName, Password); }
+
+        public DataTable GetUserInfo()
+        { return dal.GetUserInfo(); }
+
+        public int InsertUser(UserData userData)
+        { return dal.InsertUser(userData); }
+
+        public int GetRoleByID(string RoleDescription)
+        { return dal.GetRoleByID(RoleDescription); }
+
+        public DataTable GetUserByID(int userID)
+        { return dal.GetUserByID(userID); }
+
+        public int UpdateUser(UserData userdata)
+        { return dal.UpdateUser(userdata); }
+
+        public int DeleteUser(UserData userData)
+        { return dal.DeleteUser(userData); }
+
+        public DataTable AdminFilterReport()
+        { return dal.AdminFilterReport(); }
+
+        public DataTable LecturerFilterReport()
+        { return dal.LecturerFilterReport(); }
+
+        public DataTable StudentFilterReport()
+        { return dal.StudentFilterReport(); }
+
+        public DataTable LecturerInformationReport(UserData userData)
+        { return dal.LecturerInformationReport(userData); }
+
+        public DataTable StudentInformationReport(UserData userData)
+        { return dal.StudentInformationReport(userData); }
+
+        public int AddError(error Error)
+        {
+            return dal.AddError(Error);
+        }
+
+        public DataTable GetError()
+        {
+            return dal.GetError();
+        }
+
+        public int DeleteError(error Error)
+
+
+        {
+            return dal.DeleteError(Error);
+        }
+
+        public int UpdateError(error Error)
+
+        {
+            return dal.UpdateError(Error);
+        }
+
+
+        //solutionfrm
+        public int AddSolution(solution Solution)
+        {
+            return dal.AddSolution(Solution);
+        }
+
+        public DataTable GetSolution()
+        {
+            return dal.GetSolution();
+        }
+
+        public int DeleteSolution(solution Solution)
+        {
+            return dal.DeleteSolution(Solution);
+        }
+
+        public int UpdateSolution(solution Solution)
+        {
+            return dal.UpdateSolution(Solution);
+        }
+        //ErrorSolutionFrm
+        public int ErrorSolutionUpdate(ErrorSolution errorSolution)
+        {
+            return dal.ErrorSolutionUpdate(errorSolution);        
+        }
+
+        public int ErrorSolutionAdd(ErrorSolution errorSolution)
+        {
+            return dal.ErrorSolutionAdd(errorSolution);
+        }
+
+        public int ErrorSolutionDelete(ErrorSolution errorSolution)
+        {
+            return dal.ErrorSolutionDelete(errorSolution);
+        }
+
+        public DataTable GetErrorSolution(ErrorSolution errorSolution)
+        {
+            return dal.GetErrorSolution(errorSolution);
+        }
+        
+
     }
 }
+
