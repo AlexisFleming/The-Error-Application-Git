@@ -51,7 +51,7 @@ namespace The_Error_Application
             DataTable dt = new DataTable();
             dt = BLL.GetErrorSolutionByID(int.Parse(dgvErrorSolution.SelectedRows[0].Cells["ErrorSolutionID"].Value.ToString()));
 
-            //Diplsay the topicdescription and moduledescription in cmb
+            //Diplsay the SolutionID and Error in the combo box
             cmbSolution.Text = dt.Rows[0]["SolutionID"].ToString();
             cmbError.Text = dt.Rows[0]["ErrorID"].ToString();
             dtpSolutionDate.Text = dt.Rows[0]["SolutionDate"].ToString();

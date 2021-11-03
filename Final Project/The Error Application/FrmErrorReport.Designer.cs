@@ -29,48 +29,34 @@ namespace The_Error_Application
         /// </summary>
         private void InitializeComponent()
         {
-            this.StudentInfo = new System.Windows.Forms.DataGridView();
-            this.LecturerInfo = new System.Windows.Forms.DataGridView();
-            this.txtErrorID = new System.Windows.Forms.TextBox();
-            this.txtSolutionID = new System.Windows.Forms.TextBox();
+            this.dgvError = new System.Windows.Forms.DataGridView();
+            this.dgvSolution = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LecturerInfo)).BeginInit();
+            this.StudentIDdisp = new System.Windows.Forms.Button();
+            this.LecturerIDdisp = new System.Windows.Forms.Button();
+            this.StudentIDcmb = new System.Windows.Forms.ComboBox();
+            this.lecturerIDcmb = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolution)).BeginInit();
             this.SuspendLayout();
             // 
-            // StudentInfo
+            // dgvError
             // 
-            this.StudentInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentInfo.Location = new System.Drawing.Point(12, 204);
-            this.StudentInfo.Name = "StudentInfo";
-            this.StudentInfo.Size = new System.Drawing.Size(502, 234);
-            this.StudentInfo.TabIndex = 0;
-            this.StudentInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvError.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvError.Location = new System.Drawing.Point(12, 204);
+            this.dgvError.Name = "dgvError";
+            this.dgvError.Size = new System.Drawing.Size(502, 234);
+            this.dgvError.TabIndex = 0;
+            this.dgvError.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // LecturerInfo
+            // dgvSolution
             // 
-            this.LecturerInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LecturerInfo.Location = new System.Drawing.Point(721, 204);
-            this.LecturerInfo.Name = "LecturerInfo";
-            this.LecturerInfo.Size = new System.Drawing.Size(502, 234);
-            this.LecturerInfo.TabIndex = 1;
-            // 
-            // txtErrorID
-            // 
-            this.txtErrorID.Location = new System.Drawing.Point(100, 125);
-            this.txtErrorID.Name = "txtErrorID";
-            this.txtErrorID.Size = new System.Drawing.Size(100, 20);
-            this.txtErrorID.TabIndex = 2;
-            // 
-            // txtSolutionID
-            // 
-            this.txtSolutionID.Location = new System.Drawing.Point(846, 125);
-            this.txtSolutionID.Name = "txtSolutionID";
-            this.txtSolutionID.Size = new System.Drawing.Size(100, 20);
-            this.txtSolutionID.TabIndex = 3;
+            this.dgvSolution.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSolution.Location = new System.Drawing.Point(721, 204);
+            this.dgvSolution.Name = "dgvSolution";
+            this.dgvSolution.Size = new System.Drawing.Size(502, 234);
+            this.dgvSolution.TabIndex = 1;
             // 
             // label1
             // 
@@ -90,44 +76,61 @@ namespace The_Error_Application
             this.label2.TabIndex = 5;
             this.label2.Text = "LecturerID";
             // 
-            // button1
+            // StudentIDdisp
             // 
-            this.button1.Location = new System.Drawing.Point(12, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Display";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.StudentIDdisp.Location = new System.Drawing.Point(12, 168);
+            this.StudentIDdisp.Name = "StudentIDdisp";
+            this.StudentIDdisp.Size = new System.Drawing.Size(51, 30);
+            this.StudentIDdisp.TabIndex = 6;
+            this.StudentIDdisp.Text = "Display";
+            this.StudentIDdisp.UseVisualStyleBackColor = true;
+            this.StudentIDdisp.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // LecturerIDdisp
             // 
-            this.button2.Location = new System.Drawing.Point(721, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 30);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Display";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.LecturerIDdisp.Location = new System.Drawing.Point(721, 168);
+            this.LecturerIDdisp.Name = "LecturerIDdisp";
+            this.LecturerIDdisp.Size = new System.Drawing.Size(51, 30);
+            this.LecturerIDdisp.TabIndex = 7;
+            this.LecturerIDdisp.Text = "Display";
+            this.LecturerIDdisp.UseVisualStyleBackColor = true;
+            this.LecturerIDdisp.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // StudentIDcmb
+            // 
+            this.StudentIDcmb.FormattingEnabled = true;
+            this.StudentIDcmb.Location = new System.Drawing.Point(133, 123);
+            this.StudentIDcmb.Name = "StudentIDcmb";
+            this.StudentIDcmb.Size = new System.Drawing.Size(156, 21);
+            this.StudentIDcmb.TabIndex = 8;
+            this.StudentIDcmb.SelectedIndexChanged += new System.EventHandler(this.StudentIDcmb_SelectedIndexChanged);
+            // 
+            // lecturerIDcmb
+            // 
+            this.lecturerIDcmb.FormattingEnabled = true;
+            this.lecturerIDcmb.Location = new System.Drawing.Point(879, 123);
+            this.lecturerIDcmb.Name = "lecturerIDcmb";
+            this.lecturerIDcmb.Size = new System.Drawing.Size(121, 21);
+            this.lecturerIDcmb.TabIndex = 9;
             // 
             // FrmErrorReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lecturerIDcmb);
+            this.Controls.Add(this.StudentIDcmb);
+            this.Controls.Add(this.LecturerIDdisp);
+            this.Controls.Add(this.StudentIDdisp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSolutionID);
-            this.Controls.Add(this.txtErrorID);
-            this.Controls.Add(this.LecturerInfo);
-            this.Controls.Add(this.StudentInfo);
+            this.Controls.Add(this.dgvSolution);
+            this.Controls.Add(this.dgvError);
             this.Name = "FrmErrorReport";
             this.Text = "FrmErrorReport";
             this.Load += new System.EventHandler(this.FrmErrorReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.StudentInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LecturerInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolution)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,13 +138,13 @@ namespace The_Error_Application
 
         #endregion
 
-        private System.Windows.Forms.DataGridView StudentInfo;
-        private System.Windows.Forms.DataGridView LecturerInfo;
-        private System.Windows.Forms.TextBox txtErrorID;
-        private System.Windows.Forms.TextBox txtSolutionID;
+        private System.Windows.Forms.DataGridView dgvError;
+        private System.Windows.Forms.DataGridView dgvSolution;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button StudentIDdisp;
+        private System.Windows.Forms.Button LecturerIDdisp;
+        private System.Windows.Forms.ComboBox StudentIDcmb;
+        private System.Windows.Forms.ComboBox lecturerIDcmb;
     }
 }
