@@ -73,24 +73,41 @@ namespace The_Error_Application
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Module mod = new Module();
-
-            mod.ModuleID = int.Parse(dgvModule.SelectedRows[0].Cells["ModuleID"].Value.ToString());
-
-            int x = bll.DeleteModule(mod);
-            if (x > 0)
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure you wish to delete?", "Confirmation", buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show(x + " Delete!!");
-            }
-            else
-            {
-                MessageBox.Show(x + " Delete!!");
+
+                Module mod = new Module();
+
+                mod.ModuleID = int.Parse(dgvModule.SelectedRows[0].Cells["ModuleID"].Value.ToString());
+
+                int x = bll.DeleteModule(mod);
+                if (x > 0)
+                {
+                    MessageBox.Show(x + " Delete!!");
+                }
+                else
+                {
+                    MessageBox.Show(x + " Delete!!");
+                }
+
+
+
             }
         }
+
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
             dgvModule.DataSource = bll.GetModule();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLecturerHub frmLecturerHub = new frmLecturerHub();
+            frmLecturerHub.Show();
+            this.Hide();
         }
     }
 }

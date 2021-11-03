@@ -36,8 +36,6 @@ namespace The_Error_Application
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programmingModulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -45,9 +43,10 @@ namespace The_Error_Application
             // 
             // btnDisplay
             // 
-            this.btnDisplay.Location = new System.Drawing.Point(401, 153);
+            this.btnDisplay.Location = new System.Drawing.Point(301, 124);
+            this.btnDisplay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(107, 28);
+            this.btnDisplay.Size = new System.Drawing.Size(80, 23);
             this.btnDisplay.TabIndex = 5;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
@@ -55,9 +54,10 @@ namespace The_Error_Application
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(276, 153);
+            this.btnAdd.Location = new System.Drawing.Point(207, 124);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(107, 28);
+            this.btnAdd.Size = new System.Drawing.Size(80, 23);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -66,26 +66,29 @@ namespace The_Error_Application
             // dgvRole
             // 
             this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRole.Location = new System.Drawing.Point(11, 201);
+            this.dgvRole.Location = new System.Drawing.Point(8, 163);
+            this.dgvRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvRole.Name = "dgvRole";
             this.dgvRole.RowHeadersWidth = 51;
             this.dgvRole.RowTemplate.Height = 24;
-            this.dgvRole.Size = new System.Drawing.Size(781, 176);
+            this.dgvRole.Size = new System.Drawing.Size(586, 143);
             this.dgvRole.TabIndex = 6;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(376, 69);
+            this.txtDescription.Location = new System.Drawing.Point(282, 56);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(250, 22);
+            this.txtDescription.Size = new System.Drawing.Size(188, 20);
             this.txtDescription.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 74);
+            this.label1.Location = new System.Drawing.Point(127, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 45;
             this.label1.Text = "Role Description: ";
             // 
@@ -96,49 +99,38 @@ namespace The_Error_Application
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 46;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usersToolStripMenuItem,
-            this.programmingModulesToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // usersToolStripMenuItem
-            // 
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
-            this.usersToolStripMenuItem.Text = "Users";
-            // 
-            // programmingModulesToolStripMenuItem
-            // 
-            this.programmingModulesToolStripMenuItem.Name = "programmingModulesToolStripMenuItem";
-            this.programmingModulesToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
-            this.programmingModulesToolStripMenuItem.Text = "Programming Modules";
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOutToolStripMenuItem.Text = "Exit";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // frmRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 407);
+            this.ClientSize = new System.Drawing.Size(600, 331);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvRole);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmRole";
             this.Text = "frmRole";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRole)).EndInit();
@@ -158,8 +150,6 @@ namespace The_Error_Application
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem programmingModulesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }

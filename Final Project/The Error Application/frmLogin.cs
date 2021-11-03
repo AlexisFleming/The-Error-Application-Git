@@ -30,14 +30,14 @@ namespace The_Error_Application
                 ///////////////////////////////These if statements check to see what form to take the user based on their Role
                 if (sRoleCHeck == "1")
                 {//Takes Admin to admin form
-                    frmUser AdminStart = new frmUser();
+                    frmAdminHub AdminStart = new frmAdminHub();
                     AdminStart.Show();
                     this.Hide();
 
                 }
                 else if (sRoleCHeck == "2")
                 {//Takes Lecturer to lecture forms
-                    frmErrorSolution LectureStart = new frmErrorSolution();
+                    frmLecturerHub LectureStart = new frmLecturerHub();
                     LectureStart.Show();
                     this.Hide();
 

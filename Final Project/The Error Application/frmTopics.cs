@@ -74,17 +74,25 @@ namespace The_Error_Application
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Topic topic = new Topic();
-            topic.TopicID = int.Parse(dgvTopic.SelectedRows[0].Cells["TopicID"].Value.ToString());
-            
-            int x = bll.DeleteTopic(topic);
-            if (x > 0)
+            //Setting up a Yes No message box for user confirmation
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure you wish to delete?", "Confirmation", buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show(x + " Deleted!!");
-            }
-            else
-            {
-                MessageBox.Show(x + " Deleted!!");
+
+                Topic topic = new Topic();
+                topic.TopicID = int.Parse(dgvTopic.SelectedRows[0].Cells["TopicID"].Value.ToString());
+
+                int x = bll.DeleteTopic(topic);
+                if (x > 0)
+                {
+                    MessageBox.Show(x + " Deleted!!");
+                }
+                else
+                {
+                    MessageBox.Show(x + " Deleted!!");
+                }
+
             }
         }
 
@@ -109,9 +117,9 @@ namespace The_Error_Application
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
+            frmLecturerHub lecturerHub = new frmLecturerHub();
             this.Hide();
-            login.Show();
+            lecturerHub.Show();
         }
 
         private void assignTopicsToModuleToolStripMenuItem_Click(object sender, EventArgs e)

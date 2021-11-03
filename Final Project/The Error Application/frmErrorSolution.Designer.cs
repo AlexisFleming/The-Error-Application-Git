@@ -42,10 +42,6 @@ namespace The_Error_Application
             this.btnDisplay = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.solutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.topicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assignTopicToModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvErrorSolution)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -56,7 +52,7 @@ namespace The_Error_Application
             this.dtpSolutionDate.Location = new System.Drawing.Point(347, 111);
             this.dtpSolutionDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpSolutionDate.Name = "dtpSolutionDate";
-            this.dtpSolutionDate.Size = new System.Drawing.Size(235, 22);
+            this.dtpSolutionDate.Size = new System.Drawing.Size(177, 20);
             this.dtpSolutionDate.TabIndex = 2;
             // 
             // cmbError
@@ -65,7 +61,7 @@ namespace The_Error_Application
             this.cmbError.Location = new System.Drawing.Point(347, 70);
             this.cmbError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbError.Name = "cmbError";
-            this.cmbError.Size = new System.Drawing.Size(235, 24);
+            this.cmbError.Size = new System.Drawing.Size(177, 21);
             this.cmbError.TabIndex = 1;
             // 
             // cmbSolution
@@ -74,7 +70,7 @@ namespace The_Error_Application
             this.cmbSolution.Location = new System.Drawing.Point(347, 32);
             this.cmbSolution.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbSolution.Name = "cmbSolution";
-            this.cmbSolution.Size = new System.Drawing.Size(235, 24);
+            this.cmbSolution.Size = new System.Drawing.Size(177, 21);
             this.cmbSolution.TabIndex = 0;
             // 
             // btnDelete
@@ -82,7 +78,7 @@ namespace The_Error_Application
             this.btnDelete.Location = new System.Drawing.Point(392, 194);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(107, 28);
+            this.btnDelete.Size = new System.Drawing.Size(80, 23);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -93,7 +89,7 @@ namespace The_Error_Application
             this.btnUpdate.Location = new System.Drawing.Point(280, 194);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(107, 28);
+            this.btnUpdate.Size = new System.Drawing.Size(80, 23);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -104,7 +100,7 @@ namespace The_Error_Application
             this.btnAdd.Location = new System.Drawing.Point(171, 194);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(107, 28);
+            this.btnAdd.Size = new System.Drawing.Size(80, 23);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -118,7 +114,7 @@ namespace The_Error_Application
             this.dgvErrorSolution.Name = "dgvErrorSolution";
             this.dgvErrorSolution.RowHeadersWidth = 51;
             this.dgvErrorSolution.RowTemplate.Height = 24;
-            this.dgvErrorSolution.Size = new System.Drawing.Size(781, 176);
+            this.dgvErrorSolution.Size = new System.Drawing.Size(586, 143);
             this.dgvErrorSolution.TabIndex = 7;
             this.dgvErrorSolution.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvErrorSolution_CellClick);
             
@@ -126,9 +122,10 @@ namespace The_Error_Application
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(168, 116);
+            this.label3.Location = new System.Drawing.Point(126, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 73;
             this.label3.Text = "SolutionDate:";
             // 
@@ -137,16 +134,17 @@ namespace The_Error_Application
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(168, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 72;
             this.label2.Text = "Error:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(168, 39);
+            this.label1.Location = new System.Drawing.Point(126, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 17);
+            this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 71;
             this.label1.Text = "Solution: ";
             // 
@@ -155,7 +153,7 @@ namespace The_Error_Application
             this.btnDisplay.Location = new System.Drawing.Point(505, 194);
             this.btnDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(107, 28);
+            this.btnDisplay.Size = new System.Drawing.Size(80, 23);
             this.btnDisplay.TabIndex = 6;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
@@ -176,50 +174,23 @@ namespace The_Error_Application
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.solutionToolStripMenuItem,
-            this.topicToolStripMenuItem,
-            this.moduleToolStripMenuItem,
-            this.assignTopicToModuleToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // solutionToolStripMenuItem
-            // 
-            this.solutionToolStripMenuItem.Name = "solutionToolStripMenuItem";
-            this.solutionToolStripMenuItem.Size = new System.Drawing.Size(248, 26);
-            this.solutionToolStripMenuItem.Text = "Solution";
-            // 
-            // topicToolStripMenuItem
-            // 
-            this.topicToolStripMenuItem.Name = "topicToolStripMenuItem";
-            this.topicToolStripMenuItem.Size = new System.Drawing.Size(248, 26);
-            this.topicToolStripMenuItem.Text = "Topic";
-            // 
-            // moduleToolStripMenuItem
-            // 
-            this.moduleToolStripMenuItem.Name = "moduleToolStripMenuItem";
-            this.moduleToolStripMenuItem.Size = new System.Drawing.Size(248, 26);
-            this.moduleToolStripMenuItem.Text = "Module";
-            // 
-            // assignTopicToModuleToolStripMenuItem
-            // 
-            this.assignTopicToModuleToolStripMenuItem.Name = "assignTopicToModuleToolStripMenuItem";
-            this.assignTopicToModuleToolStripMenuItem.Size = new System.Drawing.Size(248, 26);
-            this.assignTopicToModuleToolStripMenuItem.Text = "Assign Topic to Module";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(248, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // frmErrorSolution
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.dtpSolutionDate);
             this.Controls.Add(this.cmbError);
@@ -260,10 +231,6 @@ namespace The_Error_Application
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem solutionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem topicToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem moduleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assignTopicToModuleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

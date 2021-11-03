@@ -40,10 +40,6 @@ namespace The_Error_Application
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.topicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assignTopicToModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assignSolutionToErrorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolution)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -157,44 +153,17 @@ namespace The_Error_Application
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.topicToolStripMenuItem,
-            this.moduleToolStripMenuItem,
-            this.assignTopicToModuleToolStripMenuItem,
-            this.assignSolutionToErrorToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // topicToolStripMenuItem
-            // 
-            this.topicToolStripMenuItem.Name = "topicToolStripMenuItem";
-            this.topicToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.topicToolStripMenuItem.Text = "Topic";
-            // 
-            // moduleToolStripMenuItem
-            // 
-            this.moduleToolStripMenuItem.Name = "moduleToolStripMenuItem";
-            this.moduleToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.moduleToolStripMenuItem.Text = "Module";
-            // 
-            // assignTopicToModuleToolStripMenuItem
-            // 
-            this.assignTopicToModuleToolStripMenuItem.Name = "assignTopicToModuleToolStripMenuItem";
-            this.assignTopicToModuleToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.assignTopicToModuleToolStripMenuItem.Text = "Assign Topic to Module";
-            // 
-            // assignSolutionToErrorToolStripMenuItem
-            // 
-            this.assignSolutionToErrorToolStripMenuItem.Name = "assignSolutionToErrorToolStripMenuItem";
-            this.assignSolutionToErrorToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.assignSolutionToErrorToolStripMenuItem.Text = "Assign Solution to Error";
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // frmSolution
             // 
@@ -237,10 +206,6 @@ namespace The_Error_Application
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem topicToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem moduleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assignTopicToModuleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assignSolutionToErrorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

@@ -84,17 +84,23 @@ namespace The_Error_Application
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ModuleTopic modTop = new ModuleTopic();          
-            modTop.ModuleTopicID = int.Parse(dgvModTopic.SelectedRows[0].Cells["ModuleTopicID"].Value.ToString());
+            //Setting up a Yes No message box for user confirmation
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure you wish to delete?", "Confirmation", buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                ModuleTopic modTop = new ModuleTopic();
+                modTop.ModuleTopicID = int.Parse(dgvModTopic.SelectedRows[0].Cells["ModuleTopicID"].Value.ToString());
 
-            int x = bll.DeleteModuleTopic(modTop);
-            if (x > 0)
-            {
-                MessageBox.Show(x + " Deleted!!");
-            }
-            else
-            {
-                MessageBox.Show(x + " Deleted!!");
+                int x = bll.DeleteModuleTopic(modTop);
+                if (x > 0)
+                {
+                    MessageBox.Show(x + " Deleted!!");
+                }
+                else
+                {
+                    MessageBox.Show(x + " Deleted!!");
+                }
             }
         }
 

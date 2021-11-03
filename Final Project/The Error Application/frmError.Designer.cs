@@ -56,7 +56,7 @@ namespace The_Error_Application
             this.btnDisplay.Location = new System.Drawing.Point(505, 174);
             this.btnDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(107, 28);
+            this.btnDisplay.Size = new System.Drawing.Size(80, 23);
             this.btnDisplay.TabIndex = 6;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@ namespace The_Error_Application
             this.btnDelete.Location = new System.Drawing.Point(392, 174);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(107, 28);
+            this.btnDelete.Size = new System.Drawing.Size(80, 23);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@ namespace The_Error_Application
             this.btnUpdate.Location = new System.Drawing.Point(280, 174);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(107, 28);
+            this.btnUpdate.Size = new System.Drawing.Size(80, 23);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@ namespace The_Error_Application
             this.btnAdd.Location = new System.Drawing.Point(171, 174);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(107, 28);
+            this.btnAdd.Size = new System.Drawing.Size(80, 23);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@ namespace The_Error_Application
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(7, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 17);
+            this.label3.Size = new System.Drawing.Size(125, 13);
             this.label3.TabIndex = 67;
             this.label3.Text = "Programming Language: ";
             // 
@@ -109,7 +109,7 @@ namespace The_Error_Application
             this.txtStudent.Location = new System.Drawing.Point(171, 87);
             this.txtStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStudent.Name = "txtStudent";
-            this.txtStudent.Size = new System.Drawing.Size(188, 22);
+            this.txtStudent.Size = new System.Drawing.Size(142, 20);
             this.txtStudent.TabIndex = 1;
             // 
             // dgvError
@@ -120,7 +120,7 @@ namespace The_Error_Application
             this.dgvError.Name = "dgvError";
             this.dgvError.RowHeadersWidth = 51;
             this.dgvError.RowTemplate.Height = 24;
-            this.dgvError.Size = new System.Drawing.Size(781, 176);
+            this.dgvError.Size = new System.Drawing.Size(586, 143);
             this.dgvError.TabIndex = 7;
             this.dgvError.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvError_CellContentClick);
             // 
@@ -129,7 +129,7 @@ namespace The_Error_Application
             this.txtDescription.Location = new System.Drawing.Point(171, 43);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(188, 22);
+            this.txtDescription.Size = new System.Drawing.Size(142, 20);
             this.txtDescription.TabIndex = 0;
             // 
             // label2
@@ -137,7 +137,7 @@ namespace The_Error_Application
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 17);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 63;
             this.label2.Text = "Student:";
             // 
@@ -146,7 +146,7 @@ namespace The_Error_Application
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 17);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 62;
             this.label1.Text = "Error Description: ";
             // 
@@ -167,7 +167,7 @@ namespace The_Error_Application
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // exitToolStripMenuItem
@@ -175,6 +175,7 @@ namespace The_Error_Application
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label4
             // 
@@ -223,7 +224,7 @@ namespace The_Error_Application
             // 
             // frmError
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cmbProgram);

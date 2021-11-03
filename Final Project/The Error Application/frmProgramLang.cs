@@ -64,23 +64,37 @@ namespace The_Error_Application
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ProgLanguage prog = new ProgLanguage();
-            prog.ProgLanguageID = int.Parse(dgvProgram.SelectedRows[0].Cells["ProgLanguageID"].Value.ToString());
 
-            int x = bll.DeleteProgLanguage(prog);
-            if (x > 0)
+            //Setting up a Yes No message box for user confirmation
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure you wish to delete?", "Confirmation", buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show(x + " Row Deleted!!");
-            }
-            else
-            {
-                MessageBox.Show(x + " Row Deleted!!");
+                ProgLanguage prog = new ProgLanguage();
+                prog.ProgLanguageID = int.Parse(dgvProgram.SelectedRows[0].Cells["ProgLanguageID"].Value.ToString());
+
+                int x = bll.DeleteProgLanguage(prog);
+                if (x > 0)
+                {
+                    MessageBox.Show(x + " Row Deleted!!");
+                }
+                else
+                {
+                    MessageBox.Show(x + " Row Deleted!!");
+                }
             }
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
             dgvProgram.DataSource = bll.GetProgLanguage();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdminHub frmAdminHub = new frmAdminHub();
+            frmAdminHub.Show();
+            this.Hide();
         }
     }
 }
