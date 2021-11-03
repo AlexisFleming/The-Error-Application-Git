@@ -11,8 +11,11 @@ namespace DAL
         public int ErrorID { get; set; }
         public string ErrorDescription { get; set; }
         public int StudentID { get; set; }
-        public string ProgLanguageID { get; set; }
-        public string ModuleTopicID { get; set; }
+        public int ProgLanguageID { get; set; }
+        public int ModuleTopicID { get; set; }
         public string ErrorStatus { get; set; }
     }
+
+
+
 }

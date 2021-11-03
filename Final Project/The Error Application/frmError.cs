@@ -34,8 +34,8 @@ namespace The_Error_Application
            
             Error.ErrorDescription = txtDescription.Text;
             Error.StudentID = int.Parse(txtStudent.Text);
-            Error.ProgLanguageID = txtProgram.Text;
-            Error.ModuleTopicID = cmbTopic.Text;
+            Error.ProgLanguageID = int.Parse(cmbProgram.SelectedValue.ToString());
+            Error.ModuleTopicID = int.Parse(cmbTopic.SelectedValue.ToString());
             Error.ErrorStatus = txtError.Text;
 
             int x = BLL.AddError(Error);
@@ -58,16 +58,14 @@ namespace The_Error_Application
             if (dgvError.SelectedRows.Count > 0)
             {
                 DataTable dt = new DataTable();
-                UserData userInfo = new UserData();
+                error Error = new error();
                 //getting user data based on value of ErrorID in the datagridview
-                dt = BLL.GetUserByID(int.Parse(dgvError.SelectedRows[0].Cells["ErrorID"].Value.ToString()));
+                dt = BLL.GetErrorByID(int.Parse(dgvError.SelectedRows[0].Cells["ErrorID"].Value.ToString()));
                 txtDescription.Text = dt.Rows[0]["ErrorDescription"].ToString();
                 txtStudent.Text = dt.Rows[0]["StudentID"].ToString();
-                txtProgram.Text = dt.Rows[0]["ProgramLanguageID"].ToString();
+                cmbProgram.Text = dt.Rows[0]["ProgramLanguageID"].ToString();
                 cmbTopic.Text = dt.Rows[0]["ModuleTopicID"].ToString();
-                txtError.Text = dt.Rows[0]["ErrorStatus"].ToString();
-
-                
+                txtError.Text = dt.Rows[0]["ErrorStatus"].ToString();                
                
             }
         }
@@ -78,8 +76,8 @@ namespace The_Error_Application
             Error.ErrorID = int.Parse(dgvError.SelectedRows[0].Cells["ErrorID"].Value.ToString());
             Error.ErrorDescription = txtDescription.Text;
             Error.StudentID = int.Parse(txtStudent.Text);
-            Error.ProgLanguageID = txtProgram.Text;
-            Error.ModuleTopicID = cmbTopic.Text;
+            Error.ProgLanguageID = int.Parse(cmbProgram.SelectedValue.ToString());
+            Error.ModuleTopicID = int.Parse(cmbTopic.SelectedValue.ToString());
             Error.ErrorStatus = txtError.Text;
 
             int x = BLL.UpdateError(Error);

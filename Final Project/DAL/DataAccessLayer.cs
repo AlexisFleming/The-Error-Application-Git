@@ -433,9 +433,15 @@ namespace DAL
         public DataTable GetLogin(string UserName, string Password)
         {
         /*
+<<<<<<< HEAD
         Runs the CheckLogin Procedure which compares the given username and password
         to the respective fields in the database and if both values match it fills
         a datatable with the information on the logged in user.
+=======
+            Runs the CheckLogin Procedure which compares the given username and password
+            to the respective fields in the database and if both values match it fills
+            a datatable with the information on the logged in user.
+>>>>>>> 9424b37831c5d8fbcc4fde51946af10e80bee1b4
 
             NOTE: Case sensitivity is already handled within the procedure.
             */
@@ -464,6 +470,7 @@ namespace DAL
              Runs the GetUserInfo Procedure which fills a data table with all data
              from tblUsers
              */
+
             try
             {
                 dbConn.Open();
@@ -494,7 +501,9 @@ namespace DAL
         public int InsertUser(UserData userData)
         {/*
           Runs InsertUser Procedure which Inserts a record into tblUser
+<<<<<<< HEAD
           */
+
 
             try
             {
@@ -527,10 +536,10 @@ namespace DAL
 //////////////////////////////////////////////////////////////////////////////////////
 
         public int GetRoleByID(string RoleDescription)
-        {/*
-          Runs the GetRoleByID Procedure which returns the RoleID for the
-          RoleDescription given and returns the RoleID in a string.
-          */
+        {
+         // Runs the GetRoleByID Procedure which returns the RoleID for the
+          //RoleDescription given and returns the RoleID in a string.
+
 
             try
             {
@@ -562,12 +571,14 @@ namespace DAL
 
 //////////////////////////////////////////////////////////////////////////////////////
 ///                               START OF GetUserByID                             ///
-//////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////// 
         public DataTable GetUserByID(int UserID)
-        {/*
+        {
+            /*
           Runs GetUserByID procedure which fills a datatable with the information
           from a specific record based on what user ID was given.
           */
+
 
             try
             {
@@ -578,9 +589,16 @@ namespace DAL
 
             }
 
+
             dbComm = new SqlCommand("GetUserByID", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
             dbComm.Parameters.AddWithValue("@UserID", UserID);
+
+
+            dbComm = new SqlCommand("sp_GetUserByID", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@UserID", UserID);
+            //Yes EXample
 
             dbAdapter = new SqlDataAdapter(dbComm);
             dt = new DataTable();
@@ -599,7 +617,9 @@ namespace DAL
         public int UpdateUser(UserData userdata)
         {/*
           Runs the UpdateUser Procedure which updates a chosen record in tblUser
+<<<<<<< HEAD
           */
+
 
             try
             {
@@ -635,7 +655,9 @@ namespace DAL
          public int DeleteUser(UserData userData)
         {/*
           Runs the DeleteUser Procedure which deletes a record from tblUser.
+<<<<<<< HEAD
           */
+
             try
             {
                 dbConn.Open();
@@ -665,7 +687,11 @@ namespace DAL
         public DataTable AdminFilterReport()
         {
             //This procedure fills a data table with information from tblUser but
+
             //only for users with the admin role
+
+            //Only for users with the admin role
+
             try
             {
                 dbConn.Open();
@@ -691,7 +717,11 @@ namespace DAL
         public DataTable LecturerFilterReport()
         {
             //This procedure fills a data table with information from tblUser but
+
             //only for users with the Lecturer role
+
+            //Only for users with the Lecturer role
+
             try
             {
                 dbConn.Open();
@@ -717,7 +747,11 @@ namespace DAL
         public DataTable StudentFilterReport()
         {
             //This procedure fills a data table with information from tblUser but
+
             //only for users with the Student role
+
+            //Only for users with the Student role
+
             try
             {
                 dbConn.Open();
@@ -745,7 +779,11 @@ namespace DAL
         public DataTable LecturerInformationReport(UserData userData)
         {
             //This procedure returns information of a Lecturer when given a userID that
+
             //is linked to the Lecturer role the information is UserID, Username,
+
+            //-is linked to the Lecturer role the information is UserID, Username,
+
             //Surname and number of Solutions submitted
             try
             {
@@ -777,7 +815,11 @@ namespace DAL
         public DataTable StudentInformationReport(UserData userData)
         {
             //This procedure returns information of a student when given a userID that
+
             //is linked to the student role the information is UserID, Username,
+
+            //-is linked to the student role the information is UserID, Username,
+
             //Surname, ProgLanguageDesc, TopicDescription, ModuleDescription and
             //YearDescription
             try
@@ -801,9 +843,44 @@ namespace DAL
 
         }
 
+
         //////////////////////////////////////////////////////////////////////////////////////
         ///                               EMD OF StudentInformationReport                  ///
         //////////////////////////////////////////////////////////////////////////////////////
+        ///
+
+
+        //////////////////////////////////////////////////////////////////////////////////////
+        ///                               START OF GetRoleID                               ///
+        //////////////////////////////////////////////////////////////////////////////////////
+
+        public DataTable GetRoleID()
+        {
+            //Gets a roleID based on what Role Description is given
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_GetRoleID", dbConn);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+
+
+
+        }
+        //////////////////////////////////////////////////////////////////////////////////////
+        ///                               END OF GetRoleID                                 ///
+        //////////////////////////////////////////////////////////////////////////////////////
+
         //methods for FrmError
         public int AddError(error Error)
         {
@@ -815,7 +892,7 @@ namespace DAL
             catch
             {
             }
-            dbComm = new SqlCommand("sp_tblError_Add", dbConn);
+            dbComm = new SqlCommand("sp_AddError", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
            
             dbComm.Parameters.AddWithValue("@ErrorDescription", Error.ErrorDescription);
@@ -848,10 +925,29 @@ namespace DAL
 
             dbAdapter.Fill(dt);
             return dt;
-
-
-
         }
+        public DataTable GetErrorByID(int errorID)
+        {
+            try
+            {
+                dbConn.Open();
+
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_GetErrorByID", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ErrorID", errorID);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+
+            dbAdapter.Fill(dt);
+            return dt;
+        }
+
         public int DeleteError(error Error)
         {
             try
@@ -893,32 +989,8 @@ namespace DAL
             return x;
         }
 
-        public DataTable GetSolution()
-        {
 
 
-
-            try
-            {
-
-                dbConn.Open();
-
-            }
-            catch
-            {
-
-            }
-            dbComm = new SqlCommand("sp_tblSolution_SelectAll", dbConn);
-            dt = new DataTable();
-            dbAdapter.Fill(dt);
-            return dt;
-
-
-
-        }
-
-
-      
 
         public int DeleteSolution(solution Solution)
         {
@@ -955,7 +1027,7 @@ namespace DAL
             dbComm.CommandType = CommandType.StoredProcedure;
 
 
-            dbComm.Parameters.AddWithValue("@ErrorDesc", Error.ErrorDescription);
+            dbComm.Parameters.AddWithValue("@ErrorDesciption", Error.ErrorDescription);
             dbComm.Parameters.AddWithValue("@StudentID", Error.StudentID);
             dbComm.Parameters.AddWithValue("@ProgLanguageID", Error.ProgLanguageID);
             dbComm.Parameters.AddWithValue("@ModuleTopicID", Error.ModuleTopicID);
@@ -983,13 +1055,53 @@ namespace DAL
 
             dbComm.Parameters.AddWithValue("@SolutionDescription", Solution.SolutionDescription);
             dbComm.Parameters.AddWithValue("@LectureID", Solution.LecturerID);
-           
-
-
 
             int x = dbComm.ExecuteNonQuery();
             return x;
         }
+
+        
+        public DataTable GetSolution()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            string sql = "sp_GetSolution";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            return dt;
+        }
+        public DataTable GetSolutionByID(int solutionID)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            string sql = "sp_GetSolutionByID";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@SolutionID", solutionID);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            return dt;
+        }
+
+        //Need a GetSolutionByID
+
         //methods for the ErrorSolution Form 
         public int ErrorSolutionUpdate(ErrorSolution errorSolution )
         {
@@ -1057,32 +1169,45 @@ namespace DAL
 
             return x;
         }
-
-        public DataTable GetErrorSolution(ErrorSolution errorSolution)
-
+        
+        public DataTable GetErrorSolution()
         {
-
-
-
             try
             {
-
                 dbConn.Open();
-
             }
-            catch
-            {
-
-            }
+            catch {  }
 
             dbComm = new SqlCommand("sp_tblErrorSolution_SelectAll", dbConn);
+            
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;                    
+
+        }
+        public DataTable GetErrorSolutionByID(int errorSolutionID)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbComm = new SqlCommand("sp_GetErrorSolutionByID", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ErrorSolutionID", errorSolutionID);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
             dt = new DataTable();
             dbAdapter.Fill(dt);
             return dt;
 
         }
 
-        
-       
+
+
+
     }
 }

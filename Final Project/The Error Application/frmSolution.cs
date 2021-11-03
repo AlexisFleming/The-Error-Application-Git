@@ -18,6 +18,7 @@ namespace The_Error_Application
         {
             InitializeComponent();
         }
+        BusinessLogicLayer BLL = new BusinessLogicLayer();
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -46,6 +47,7 @@ namespace The_Error_Application
 
             Solution.SolutionDescription = txtDescription.Text;
             Solution.LecturerID = int.Parse(cmbLecture.Text);
+            Solution.SolutionID = int.Parse(dgvSolution.SelectedRows[0].Cells["SolutionID"].Value.ToString());
 
             int x = BLL.UpdateSolution(Solution);
             if (x > 0)
@@ -81,19 +83,15 @@ namespace The_Error_Application
 
         private void dgvSolution_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvSolution.DataSource = BLL.GetSolution();
+           
             if (dgvSolution.SelectedRows.Count > 0)
             {
                 DataTable dt = new DataTable();
                 solution Solution = new solution();
-                //getting user data based on value of ErrorID in the datagridview
-                dt = BLL.GetSolution(int.Parse(dgvSolution.SelectedRows[0].Cells["ErrorID"].Value.ToString()));
+                //getting user data based on value of SolutionID in the datagridview
+                dt = BLL.GetSolutionByID(int.Parse(dgvSolution.SelectedRows[0].Cells["SolutionID"].Value.ToString()));
                 txtDescription.Text = dt.Rows[0]["SolutionDescription"].ToString();
-                cmbLecture.Text = dt.Rows[0]["LecturerID"].ToString();
-               
-
-
-
+                cmbLecture.Text = dt.Rows[0]["LecturerID"].ToString();              
             }
 
         }

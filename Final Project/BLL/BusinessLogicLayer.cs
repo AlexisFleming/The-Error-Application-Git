@@ -163,6 +163,7 @@ namespace BLL
         public DataTable StudentInformationReport(UserData userData)
         { return dal.StudentInformationReport(userData); }
 
+
         public int AddError(error Error)
         {
             return dal.AddError(Error);
@@ -172,20 +173,18 @@ namespace BLL
         {
             return dal.GetError();
         }
-
+        public DataTable GetErrorByID(int errorID)
+        {
+            return dal.GetErrorByID(errorID);
+        }
         public int DeleteError(error Error)
-
-
         {
             return dal.DeleteError(Error);
         }
-
         public int UpdateError(error Error)
-
         {
             return dal.UpdateError(Error);
         }
-
 
         //solutionfrm
         public int AddSolution(solution Solution)
@@ -193,6 +192,10 @@ namespace BLL
             return dal.AddSolution(Solution);
         }
 
+        public DataTable GetSolutionByID(int solutionID)
+        {
+            return dal.GetSolutionByID(solutionID);
+        }
         public DataTable GetSolution()
         {
             return dal.GetSolution();
@@ -223,11 +226,16 @@ namespace BLL
             return dal.ErrorSolutionDelete(errorSolution);
         }
 
-        public DataTable GetErrorSolution(ErrorSolution errorSolution)
+        public DataTable GetErrorSolution()
         {
-            return dal.GetErrorSolution(errorSolution);
+            return dal.GetErrorSolution();
         }
-        
+        public DataTable GetErrorSolutionByID(int errorSolutionID)
+        {
+            return dal.GetErrorSolutionByID(errorSolutionID);
+        }
+
+
 
     }
 }
