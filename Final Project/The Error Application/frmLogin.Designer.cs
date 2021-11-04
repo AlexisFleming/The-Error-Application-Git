@@ -34,6 +34,7 @@ namespace The_Error_Application
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnExitProgram = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -86,11 +87,22 @@ namespace The_Error_Application
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // btnExitProgram
+            // 
+            this.btnExitProgram.Location = new System.Drawing.Point(216, 177);
+            this.btnExitProgram.Name = "btnExitProgram";
+            this.btnExitProgram.Size = new System.Drawing.Size(101, 23);
+            this.btnExitProgram.TabIndex = 3;
+            this.btnExitProgram.Text = "Exit Program";
+            this.btnExitProgram.UseVisualStyleBackColor = true;
+            this.btnExitProgram.Click += new System.EventHandler(this.btnExitProgram_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 249);
+            this.Controls.Add(this.btnExitProgram);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
@@ -111,6 +123,7 @@ namespace The_Error_Application
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnExitProgram;
     }
 }
 

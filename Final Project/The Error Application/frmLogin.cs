@@ -56,5 +56,17 @@ namespace The_Error_Application
                 MessageBox.Show("Incorrect Username or Password.");
             }
         }
+
+        private void btnExitProgram_Click(object sender, EventArgs e)
+        {
+
+            //Setting up a Yes No message box for user confirmation
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+        }
     }
 }

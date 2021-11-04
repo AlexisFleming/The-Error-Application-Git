@@ -96,5 +96,12 @@ namespace The_Error_Application
             frmAdminHub.Show();
             this.Hide();
         }
+
+        private void btnProgLangReport_Click(object sender, EventArgs e)
+        {
+            frmProgLangReports frmProgLangReports = new frmProgLangReports();
+            frmProgLangReports.Show();
+            this.Hide();
+        }
     }
 }

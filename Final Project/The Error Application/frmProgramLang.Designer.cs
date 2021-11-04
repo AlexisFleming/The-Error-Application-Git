@@ -39,6 +39,7 @@ namespace The_Error_Application
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnProgLangReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProgram)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +47,7 @@ namespace The_Error_Application
             // btnDisplay
             // 
             this.btnDisplay.Location = new System.Drawing.Point(379, 124);
-            this.btnDisplay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(80, 23);
             this.btnDisplay.TabIndex = 4;
@@ -57,7 +58,7 @@ namespace The_Error_Application
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(294, 124);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 23);
             this.btnDelete.TabIndex = 3;
@@ -68,7 +69,7 @@ namespace The_Error_Application
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(210, 124);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(80, 23);
             this.btnUpdate.TabIndex = 2;
@@ -79,7 +80,7 @@ namespace The_Error_Application
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(128, 124);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(80, 23);
             this.btnAdd.TabIndex = 1;
@@ -91,7 +92,7 @@ namespace The_Error_Application
             // 
             this.dgvProgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProgram.Location = new System.Drawing.Point(8, 168);
-            this.dgvProgram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProgram.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProgram.Name = "dgvProgram";
             this.dgvProgram.RowHeadersWidth = 51;
             this.dgvProgram.RowTemplate.Height = 24;
@@ -102,7 +103,7 @@ namespace The_Error_Application
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(308, 54);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(161, 20);
             this.txtDescription.TabIndex = 0;
@@ -144,11 +145,22 @@ namespace The_Error_Application
             this.logOutToolStripMenuItem.Text = "Exit";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
+            // btnProgLangReport
+            // 
+            this.btnProgLangReport.Location = new System.Drawing.Point(464, 124);
+            this.btnProgLangReport.Name = "btnProgLangReport";
+            this.btnProgLangReport.Size = new System.Drawing.Size(109, 23);
+            this.btnProgLangReport.TabIndex = 42;
+            this.btnProgLangReport.Text = "Generate Reports";
+            this.btnProgLangReport.UseVisualStyleBackColor = true;
+            this.btnProgLangReport.Click += new System.EventHandler(this.btnProgLangReport_Click);
+            // 
             // frmProgramLang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btnProgLangReport);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -158,7 +170,7 @@ namespace The_Error_Application
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmProgramLang";
             this.Text = "frmProgramLang";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProgram)).EndInit();
@@ -181,5 +193,6 @@ namespace The_Error_Application
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.Button btnProgLangReport;
     }
 }

@@ -33,12 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="BLL">
       <HintPath>..\BLL\bin\Debug\BLL.dll</HintPath>
     </Reference>
-    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DAL">
       <HintPath>..\BLL\bin\Debug\DAL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -71,6 +69,12 @@
     </Compile>
     <Compile Include="frmLecturerHub.Designer.cs">
       <DependentUpon>frmLecturerHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgLangReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProgLangReports.Designer.cs">
+      <DependentUpon>frmProgLangReports.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTopics.cs">
       <SubType>Form</SubType>
@@ -142,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLecturerHub.resx">
       <DependentUpon>frmLecturerHub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgLangReports.resx">
+      <DependentUpon>frmProgLangReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTopics.resx">
       <DependentUpon>frmTopics.cs</DependentUpon>

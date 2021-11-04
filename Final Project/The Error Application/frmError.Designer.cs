@@ -158,7 +158,7 @@ namespace The_Error_Application
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 68;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -169,11 +169,12 @@ namespace The_Error_Application
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -183,7 +184,7 @@ namespace The_Error_Application
             this.label4.Location = new System.Drawing.Point(388, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 17);
+            this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 70;
             this.label4.Text = "Topic Module ID";
             // 
@@ -193,7 +194,7 @@ namespace The_Error_Application
             this.label5.Location = new System.Drawing.Point(388, 91);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 17);
+            this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 71;
             this.label5.Text = "Error Status";
             // 
@@ -201,17 +202,17 @@ namespace The_Error_Application
             // 
             this.cmbTopic.FormattingEnabled = true;
             this.cmbTopic.Location = new System.Drawing.Point(512, 41);
-            this.cmbTopic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTopic.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTopic.Name = "cmbTopic";
-            this.cmbTopic.Size = new System.Drawing.Size(160, 24);
+            this.cmbTopic.Size = new System.Drawing.Size(160, 21);
             this.cmbTopic.TabIndex = 72;
             // 
             // txtError
             // 
             this.txtError.Location = new System.Drawing.Point(512, 82);
-            this.txtError.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtError.Margin = new System.Windows.Forms.Padding(4);
             this.txtError.Name = "txtError";
-            this.txtError.Size = new System.Drawing.Size(160, 22);
+            this.txtError.Size = new System.Drawing.Size(160, 20);
             this.txtError.TabIndex = 73;
             // 
             // cmbProgram
@@ -219,7 +220,7 @@ namespace The_Error_Application
             this.cmbProgram.FormattingEnabled = true;
             this.cmbProgram.Location = new System.Drawing.Point(171, 127);
             this.cmbProgram.Name = "cmbProgram";
-            this.cmbProgram.Size = new System.Drawing.Size(188, 24);
+            this.cmbProgram.Size = new System.Drawing.Size(188, 21);
             this.cmbProgram.TabIndex = 74;
             // 
             // frmError

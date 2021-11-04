@@ -22,6 +22,9 @@ namespace The_Error_Application
 
         BusinessLogicLayer bll = new BusinessLogicLayer();
 
+        public Boolean bLecturerActivated = false;
+        public Boolean bStudentActivated = false;
+
         private void frmUser_Load(object sender, EventArgs e)
         {
             //This block of code sets up displays for the combo box and datagridview table
@@ -49,6 +52,8 @@ namespace The_Error_Application
             txtLastName.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
+            bStudentActivated = false;
+            bLecturerActivated = false;
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
@@ -74,6 +79,9 @@ namespace The_Error_Application
             txtLastName.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
+            dgvAdmin.Enabled = true;
+            bStudentActivated = false;
+            bLecturerActivated = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -108,12 +116,36 @@ namespace The_Error_Application
             {
                 DataTable dt = new DataTable();
                 UserData userInfo = new UserData();
-                //getting user data based on value of UserID in the datagridview and filling in textboxes
-                dt = bll.GetUserByID(int.Parse(dgvAdmin.SelectedRows[0].Cells["UserID"].Value.ToString()));
-                txtFirstName.Text = dt.Rows[0]["Username"].ToString();
-                txtLastName.Text = dt.Rows[0]["Surname"].ToString();
-                txtEmail.Text = dt.Rows[0]["Email"].ToString();
-                txtPassword.Text = dt.Rows[0]["Password"].ToString();
+
+                if (bLecturerActivated == true)
+                {
+                    //getting user data based on value of UserID in the datagridview and filling in textboxes
+                    dt = bll.GetUserByID(int.Parse(dgvAdmin.SelectedRows[0].Cells["UserID"].Value.ToString()));
+                    txtFirstName.Text = dt.Rows[0]["Username"].ToString();
+                    txtLastName.Text = dt.Rows[0]["Surname"].ToString();
+                    txtEmail.Text = dt.Rows[0]["Email"].ToString();
+                    txtPassword.Text = dt.Rows[0]["Password"].ToString();
+                    btnLectReport.Enabled = true;
+                }else if (bStudentActivated == true)
+                {
+                    //getting user data based on value of UserID in the datagridview and filling in textboxes
+                    dt = bll.GetUserByID(int.Parse(dgvAdmin.SelectedRows[0].Cells["UserID"].Value.ToString()));
+                    txtFirstName.Text = dt.Rows[0]["Username"].ToString();
+                    txtLastName.Text = dt.Rows[0]["Surname"].ToString();
+                    txtEmail.Text = dt.Rows[0]["Email"].ToString();
+                    txtPassword.Text = dt.Rows[0]["Password"].ToString();
+                    btnStudReport.Enabled = true;
+                }
+                else
+                {
+                    //getting user data based on value of UserID in the datagridview and filling in textboxes
+                    dt = bll.GetUserByID(int.Parse(dgvAdmin.SelectedRows[0].Cells["UserID"].Value.ToString()));
+                    txtFirstName.Text = dt.Rows[0]["Username"].ToString();
+                    txtLastName.Text = dt.Rows[0]["Surname"].ToString();
+                    txtEmail.Text = dt.Rows[0]["Email"].ToString();
+                    txtPassword.Text = dt.Rows[0]["Password"].ToString();
+
+                }
 
                 //Enabling and disabling relevent buttons
                 btnUpdate.Enabled = true;
@@ -123,6 +155,7 @@ namespace The_Error_Application
                 btnLectureSort.Enabled = false;
                 btnStudentSort.Enabled = false;
                 dgvAdmin.DataSource = dt;
+                dgvAdmin.Enabled = false;
             }
         }
 
@@ -169,6 +202,7 @@ namespace The_Error_Application
                 txtLastName.Text = "";
                 txtEmail.Text = "";
                 txtPassword.Text = "";
+                dgvAdmin.Enabled = true;
             }
             else
             {
@@ -214,6 +248,7 @@ namespace The_Error_Application
                     txtLastName.Text = "";
                     txtEmail.Text = "";
                     txtPassword.Text = "";
+                    dgvAdmin.Enabled = true;
                 }
                 else
                 {
@@ -237,12 +272,15 @@ namespace The_Error_Application
             //Clears textboxes and disables irrelevent buttons
             btnLectReport.Enabled = false;
             btnStudReport.Enabled = false;
+            btnAdd.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
+            bLecturerActivated = false;
+            bStudentActivated = false;
         }
 
         private void btnLectureSort_Click(object sender, EventArgs e)
@@ -250,7 +288,7 @@ namespace The_Error_Application
             //Filters dgvAdmin to show only Lecturer users
             dgvAdmin.DataSource = bll.LecturerFilterReport();
             //Clears textboxes and disables irrelevent buttons
-            btnLectReport.Enabled = true;
+            //btnLectReport.Enabled = true;
             btnStudReport.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
@@ -258,6 +296,8 @@ namespace The_Error_Application
             txtLastName.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
+            bLecturerActivated = true;
+            btnAdd.Enabled = false;
         }
 
         private void btnStudentSort_Click(object sender, EventArgs e)
@@ -267,12 +307,14 @@ namespace The_Error_Application
             //Clears textboxes and disables irrelevent buttons
             btnLectReport.Enabled = false;
             btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            btnStudReport.Enabled = true;
+            btnDelete.Enabled = false;         
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
+            bLecturerActivated = false;
+            bStudentActivated = true;
+            btnAdd.Enabled = false;
         }
 
         private void btnReportHelp_Click(object sender, EventArgs e)

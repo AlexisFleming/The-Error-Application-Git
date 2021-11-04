@@ -1206,8 +1206,59 @@ namespace DAL
 
         }
 
+        public DataTable GetMostProgQuest()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbComm = new SqlCommand("sp_ProgLangMostQuest", dbConn);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+
+        }
+
+        public DataTable GetLeastProgAnswered()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbComm = new SqlCommand("sp_ProgLangLeastAnswered", dbConn);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+        }
+
+        public DataTable ProgLangDiffLang(string sErrorDescrtiption)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbComm = new SqlCommand("sp_ProgLangDiffLang", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@ErrorDiscription",sErrorDescrtiption);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
 
 
+        }
 
     }
 }

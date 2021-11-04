@@ -235,8 +235,21 @@ namespace BLL
             return dal.GetErrorSolutionByID(errorSolutionID);
         }
 
+        public DataTable GetMostProgQuest()
+        {
+            return dal.GetMostProgQuest();
+        }
+
+        public DataTable GetLeastProgAnswered()
+        {
+            return dal.GetLeastProgAnswered();
+        }
 
 
+        public DataTable ProgLangDiffLang(string sErrorDescrtiption)
+        {
+            return dal.ProgLangDiffLang(sErrorDescrtiption);
+        }
     }
 }
 

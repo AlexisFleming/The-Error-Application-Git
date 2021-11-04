@@ -107,6 +107,7 @@ namespace The_Error_Application
             // 
             // cmbRole
             // 
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Location = new System.Drawing.Point(264, 109);
             this.cmbRole.Margin = new System.Windows.Forms.Padding(2);
@@ -120,7 +121,6 @@ namespace The_Error_Application
             this.txtPassword.Location = new System.Drawing.Point(264, 82);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(161, 23);
             this.txtPassword.TabIndex = 3;
             // 
@@ -229,7 +229,7 @@ namespace The_Error_Application
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.logOutToolStripMenuItem.Text = "Exit";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
